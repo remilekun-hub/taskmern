@@ -1,13 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import Header from "./components/Header";
 import "./App.css";
+import Input from "./components/Input";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Edit from "./pages/Edit";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <h1>hello world</h1>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/edit/:id" element={<Edit />} />
+        <Route path="*" element={"not found"} />
+      </Routes>
     </div>
   );
 }
