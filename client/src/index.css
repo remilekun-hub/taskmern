@@ -6,7 +6,11 @@
 
 body {
   background-color: whitesmoke;
-  min-height: 100vh;
+}
+a {
+  all: unset;
+  cursor: pointer;
+  /* text-decoration: none; */
 }
 
 header {
@@ -62,4 +66,15 @@ textarea:focus {
 }
 .check {
   cursor: pointer;
+}
+.edit {
+  color: rgb(3, 57, 57);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.completed {
+  text-decoration: line-through;
+}
+.completed-task {
+  background-color: rgba(4, 77, 77, 0.241);
 }

@@ -2,5 +2,30 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 16px;
-  padding-top: 50px;
+  padding-top: 25px;
+}
+.task-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.task {
+  padding: 10px;
+  background-color: rgba(0, 128, 128, 0.376);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.task div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.innerdiv span:nth-child(1) {
+  margin-right: 15px;
+}
+.container .edit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

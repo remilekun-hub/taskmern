@@ -1,15 +1,23 @@
 import React from "react";
 import { useState } from "react";
+import axios from "axios";
 
 function Input() {
   const [text, setText] = useState("");
   return (
     <div className="input-container">
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          setText("");
-          console.log("submited");
+          try {
+            if (!text) return;
+            await axios.post("http://localhost:5000/api/v1/tasks", {
+              description: text,
+            });
+            setText("");
+          } catch (error) {
+            console.log(error);
+          }
         }}
       >
         <textarea
