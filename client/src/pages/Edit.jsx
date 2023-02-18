@@ -9,7 +9,10 @@ function Edit() {
   const { id } = useParams();
   const [task, setTask] = useState({});
   const [text, setText] = useState("");
+
   const navigate = useNavigate();
+  const [check, setCheck] = useState(false);
+
   useEffect(() => {
     getTask(id).then((data) => setTask(data));
   }, []);
@@ -17,32 +20,50 @@ function Edit() {
   if (!task) return "error fetching data";
   return (
     <div className="container">
-      <div className="edit">
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
-            try {
-              await axios.patch(`http://localhost:5000/api/v1/tasks/${id}`, {
-                description: text,
-              });
-              setText("");
-              navigate("/");
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+          try {
+            await axios.patch(`http://localhost:5000/api/v1/tasks/${id}`, {
+              description: text,
+              completed: check,
+            });
+            setText("");
+            navigate("/");
+          } catch (error) {
+            console.log(error);
+          }
+        }}
+      >
+        <textarea
+          type="text"
+          defaultValue={task?.description}
+          onChange={(e) => setText(e.target.value)}
+        ></textarea>
 
-              console.log("submitted");
-            } catch (error) {
-              console.log(error);
-            }
-          }}
-        >
+        <div>
+          <label htmlFor="completed">Complete: </label>
           <input
-            type="text"
-            defaultValue={task?.description}
-            onChange={(e) => setText(e.target.value)}
+            name="completed"
+            type="checkbox"
+            defaultChecked={task?.completed}
+            aria-label="completed"
+            onChange={(e) => setCheck(e.target.checked)}
           />
-          <input type="submit" value="Edit Task" />
-        </form>
-        <Link to="/">Go to Tasks</Link>
-      </div>
+        </div>
+
+        <input
+          type="submit"
+          id="complete"
+          value="Edit Task"
+          aria-label="submit button"
+          className="edit"
+        />
+
+        <Link to="/" className="go">
+          Go to Tasks
+        </Link>
+      </form>
     </div>
   );
 }

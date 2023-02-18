@@ -1,31 +1,91 @@
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 16px;
-  padding-top: 25px;
+  padding: 30px 16px;
 }
-.task-container {
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
+  max-width: 400px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid teal;
+  height: 80px;
+  padding: 5px;
+  resize: none;
+}
+textarea:focus {
+  outline: 2px solid teal;
+  outline-offset: 1px;
+}
+form .submit-btn {
+  width: 100%;
+  padding: 14px;
+  max-width: 400px;
+  cursor: pointer;
+  border: 1px solid teal;
+  background: rgba(0, 128, 128, 0.589);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.edit {
+  width: 100%;
+  padding: 14px;
+  max-width: 400px;
+  cursor: pointer;
+  border: 1px solid teal;
+  background: rgba(0, 128, 128, 0.589);
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+form .submit-btn:hover,
+form .submit-btn:focus {
+  outline: 2px solid teal;
+  outline-offset: 1px;
+}
+
+.task-container {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
 }
 .task {
   padding: 10px;
-  background-color: rgba(0, 128, 128, 0.376);
-  margin-bottom: 10px;
+  margin: 20px 0;
+  background: rgba(0, 128, 128, 0.859);
+}
+.task .innerdiv {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 3px 0;
+  margin-top: 5px;
+}
+.task .innerdiv div {
+  margin-left: 10px;
   cursor: pointer;
 }
-.task div {
-  margin-top: 10px;
+.complete-div {
   display: flex;
-  justify-content: space-between;
-}
-.innerdiv span:nth-child(1) {
-  margin-right: 15px;
-}
-.container .edit {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
+  margin-bottom: 5px;
+}
+.complete-div label {
+  margin-right: 10px;
+}
+.completed {
+  text-decoration: line-through;
+}
+.go {
+  text-align: center;
+}
+.completed-task {
+  background-color: rgba(0, 128, 128, 0.296);
 }

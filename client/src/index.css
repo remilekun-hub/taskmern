@@ -3,78 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  background-color: whitesmoke;
-}
 a {
-  all: unset;
-  cursor: pointer;
-  /* text-decoration: none; */
+  text-decoration: none;
+  color: black;
 }
-
 header {
   width: 100%;
-  background-color: teal;
+  background: teal;
+  color: white;
+  padding: 20px 16px;
 }
 header nav {
-  padding: 25px 16px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-header nav h1 {
-  letter-spacing: 1px;
-}
-
-.input-container {
-  display: flex;
-  justify-content: center;
-  padding: 0 16px;
-}
-.input-container form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-textarea {
-  all: unset;
-  resize: none;
-  word-wrap: break-word;
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid teal;
-  width: 100%;
-  height: 70px;
-  max-height: auto;
-  max-width: 500px;
-  margin-bottom: 15px;
-}
-.submit-btn {
-  all: unset;
-  cursor: pointer;
-  background: rgba(0, 128, 128, 0.461);
-  border: 2px solid teal;
-  padding: 10px;
-  border-radius: 3px;
-  width: 100%;
-  text-align: center;
-  max-width: 500px;
-}
-textarea:focus {
-  outline: 1px solid teal;
-}
-.check {
-  cursor: pointer;
-}
-.edit {
-  color: rgb(3, 57, 57);
-  width: 1.2rem;
-  height: 1.2rem;
-}
-.completed {
-  text-decoration: line-through;
-}
-.completed-task {
-  background-color: rgba(4, 77, 77, 0.241);
+  max-width: calc(900px - 16px);
+  margin: auto;
 }
