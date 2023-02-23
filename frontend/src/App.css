@@ -1,0 +1,70 @@
+#root {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 40px 16px 0 16px;
+  text-align: center;
+}
+/* .wrapper {
+  background: red;
+} */
+form div {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 0 0;
+}
+.text-input {
+  all: unset;
+  text-align: left;
+  border: 2px solid rgba(0, 0, 0, 0.644);
+  border-radius: 5px;
+  padding: 7px;
+  width: 100%;
+  max-width: 400px;
+}
+.home-form {
+  margin-bottom: 50px;
+}
+.text-input::placeholder {
+  text-align: left;
+}
+.submit {
+  all: unset;
+  cursor: pointer;
+  padding: 2px 5px;
+  margin-left: 4px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  background-color: rgba(76, 0, 130, 0.686);
+  color: white;
+}
+.task {
+  background-color: rgba(245, 245, 245, 0.854);
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.task {
+  display: flex;
+}
+.task p {
+  flex: 1;
+}
+
+.form-col {
+  display: flex;
+  align-items: center;
+}
+
+.edit form {
+  border: 1px solid rgba(245, 245, 245, 0.805);
+}
+.edit-btn {
+  all: unset;
+  padding: 10px 25px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  background-color: rgba(76, 0, 130, 0.686);
+  color: white;
+  margin: 15px 0;
+}
