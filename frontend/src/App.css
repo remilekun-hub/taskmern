@@ -1,5 +1,5 @@
 #root {
-  max-width: 550px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 40px 16px 0 16px;
   text-align: center;
@@ -30,7 +30,7 @@ form div {
 .submit {
   all: unset;
   cursor: pointer;
-  padding: 2px 5px;
+  padding: 10px;
   margin-left: 4px;
   letter-spacing: 2px;
   border-radius: 5px;
@@ -39,24 +39,35 @@ form div {
 }
 .task {
   background-color: rgba(245, 245, 245, 0.854);
-  padding: 16px;
+  padding: 16px 10px;
   text-align: left;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 .task {
   display: flex;
+  align-items: center;
 }
 .task p {
   flex: 1;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .form-col {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
-
-.edit form {
-  border: 1px solid rgba(245, 245, 245, 0.805);
+.form-col p {
+  font-size: 18px;
+  margin-right: 0.7rem;
+}
+.form-col .text-input {
+  flex: 1;
+}
+.checkbox {
+  font-size: 5rem;
 }
 .edit-btn {
   all: unset;
@@ -67,4 +78,40 @@ form div {
   background-color: rgba(76, 0, 130, 0.686);
   color: white;
   margin: 15px 0;
+}
+.edit,
+.delete {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: black;
+  cursor: pointer;
+}
+.check {
+  width: 1.7rem;
+  height: 1.7rem;
+  color: rgba(0, 128, 0, 0.708);
+}
+.delete {
+  margin-left: 1.4rem;
+}
+.actions {
+  display: flex;
+  align-items: center;
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.completed {
+  text-decoration: line-through;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+.heading h2 {
+  margin-right: 1rem;
 }
